@@ -64,6 +64,8 @@ a {
 .header {
   display: grid;
   gap: 12px;
+  text-align: center;
+  justify-items: center;
 }
 
 .site-title {
@@ -91,6 +93,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  justify-content: center;
 }
 
 .nav-link {
@@ -120,6 +123,14 @@ a {
   font-weight: 900;
   text-shadow: 2px 2px 0 #000, 4px 4px 0 #fff;
   animation: hue 1.2s linear infinite;
+}
+
+.invite-text {
+  font-size: clamp(16px, 2.6vw, 22px);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 6px 0;
+  color: var(--yellow);
 }
 
 @keyframes hue {
@@ -238,6 +249,23 @@ label {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 10px;
   text-align: center;
+}
+
+.countdown-dock {
+  position: sticky;
+  top: 12px;
+  margin: 12px 0 0 auto;
+  width: min(260px, 92vw);
+  z-index: 3;
+}
+
+.countdown-dock .countdown {
+  grid-template-columns: repeat(2, minmax(80px, 1fr));
+  gap: 8px;
+}
+
+.countdown-dock .count-num {
+  font-size: 20px;
 }
 
 .count-box {
@@ -427,4 +455,9 @@ textarea {
   .nav { justify-content: center; }
   .btn { width: 100%; justify-content: center; }
   .page { padding: 12px; }
+  .countdown-dock {
+    position: static;
+    width: 100%;
+    margin-top: 12px;
+  }
 }

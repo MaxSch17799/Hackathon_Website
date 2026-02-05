@@ -17,7 +17,7 @@
       <nav class="nav">
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link" href="ai.html">AI Concepts</a>
-        <a class="nav-link" href="tips.html">Tips & Tricks</a>
+        <a class="nav-link" href="tips.html">Learn some tips and tricks now.</a>
       </nav>
     </header>
 
@@ -43,25 +43,41 @@
         <div class="acc-item open">
           <div class="acc-header">1) Ideation <span>▶</span></div>
           <div class="acc-body">
-            Ask AI to challenge the idea and ask clarifying questions. Let it poke holes early.
+            <ul class="list">
+              <li>Explain idea, and ask AI to highlight issues and ask questions to clarify, to solidify the concept.</li>
+            </ul>
           </div>
         </div>
         <div class="acc-item">
           <div class="acc-header">2) Planning <span>▶</span></div>
           <div class="acc-body">
-            Write a quick planning doc, have a second agent review it, then split into chunks for parallel agents.
+            <ul class="list">
+              <li>Create planning document and refine through rounds of questions.</li>
+              <li>Ask another agent to review the plan and provide feedback that you feed into the initial agent.</li>
+              <li>Ask the agent to break up the project into individual chunks where each chunk can be created and worked on independently by other agents.</li>
+            </ul>
           </div>
         </div>
         <div class="acc-item">
           <div class="acc-header">3) Execution <span>▶</span></div>
           <div class="acc-body">
-            Don’t hand-write everything. Run multiple agents, keep an agents.md/readme.md, ask for docs/comments, and use screenshots or PowerPoint mockups as inputs.
+            <ul class="list">
+              <li>You shouldn’t bother writing lines of code yourself.</li>
+              <li>Run multiple agents/tools/chats at once.</li>
+              <li>Have an agents.md/readme.md written that explains the intention of your program and gives context to future agents.</li>
+              <li>Ask agents to explain parts of the code, create documentation and add comments, to guide future developers and agents.</li>
+              <li>Build UI layout in PowerPoint, and ask an agent to describe it to the coding agent, or paste screenshots of the UI into the coding agent.</li>
+            </ul>
           </div>
         </div>
         <div class="acc-item">
           <div class="acc-header">4) Review / Debug <span>▶</span></div>
           <div class="acc-body">
-            Paste logs, switch agents when stuck, and add screenshots to help the AI see what’s wrong.
+            <ul class="list">
+              <li>Just paste console logs into AI chat; have it figure it out for you and point you in the right direction.</li>
+              <li>Switch to another agent to get a fresh perspective on a bug if one agent cant fix it.</li>
+              <li>Add screenshots to show bugs.</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -74,36 +90,6 @@
         <button class="copy-btn" data-copy="Investigate XYZ behavior and report back with hypotheses and tests.">Investigate XYZ behavior and report back with hypotheses and tests.</button>
         <button class="copy-btn" data-copy="Help me formulate a prompt for <goal> with constraints <…>.">Help me formulate a prompt for <goal> with constraints <…>.</button>
         <button class="copy-btn" data-copy="Be specific; pay attention to the language you use.">Be specific; pay attention to the language you use.</button>
-      </div>
-    </section>
-
-    <section class="panel" style="margin-top: 14px;">
-      <div class="kicker">Prompt builder</div>
-      <div class="prompt-builder">
-        <div class="form-row">
-          <div>
-            <label for="pb-goal">Goal</label>
-            <input id="pb-goal" class="input" placeholder="Build a neon invite landing page" />
-          </div>
-          <div>
-            <label for="pb-context">Context</label>
-            <input id="pb-context" class="input" placeholder="Static site, no backend, 3 pages" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div>
-            <label for="pb-constraints">Constraints</label>
-            <input id="pb-constraints" class="input" placeholder="No private info, 90s style, mobile-friendly" />
-          </div>
-          <div>
-            <label for="pb-output">Output format</label>
-            <input id="pb-output" class="input" placeholder="HTML/CSS/JS with file list" />
-          </div>
-        </div>
-        <div class="output-box" id="pb-result"></div>
-        <div class="copy-row">
-          <button class="btn secondary" id="pb-copy">Copy prompt</button>
-        </div>
       </div>
     </section>
 

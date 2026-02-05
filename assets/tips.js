@@ -21,38 +21,4 @@
       }
     });
   });
-
-  const goal = document.getElementById("pb-goal");
-  const context = document.getElementById("pb-context");
-  const constraints = document.getElementById("pb-constraints");
-  const output = document.getElementById("pb-output");
-  const result = document.getElementById("pb-result");
-  const copyResult = document.getElementById("pb-copy");
-
-  function buildPrompt() {
-    const lines = [];
-    if (goal && goal.value.trim()) lines.push(`Goal: ${goal.value.trim()}`);
-    if (context && context.value.trim()) lines.push(`Context: ${context.value.trim()}`);
-    if (constraints && constraints.value.trim()) lines.push(`Constraints: ${constraints.value.trim()}`);
-    if (output && output.value.trim()) lines.push(`Output format: ${output.value.trim()}`);
-    result.textContent = lines.join("\n");
-  }
-
-  [goal, context, constraints, output].forEach((el) => {
-    if (el) el.addEventListener("input", buildPrompt);
-  });
-  buildPrompt();
-
-  if (copyResult) {
-    copyResult.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(result.textContent);
-        const original = copyResult.textContent;
-        copyResult.textContent = "Copied!";
-        setTimeout(() => (copyResult.textContent = original), 1200);
-      } catch {
-        alert("Copy failed. You can manually copy the prompt.");
-      }
-    });
-  }
 })();

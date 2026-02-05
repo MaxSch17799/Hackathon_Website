@@ -10,17 +10,40 @@
   <div class="page">
     <header class="panel header">
       <div>
-        <div class="kicker">Neon invite • Public info only</div>
         <h1 class="site-title"><span class="rainbow">AI Hackathon; Tips and tricks for AI working</span></h1>
+        <div class="invite-text blink">YOU ARE INVITED</div>
         <p class="sub-title">Learn, build, and share how we use AI to code at work. All levels welcome.</p>
         <p class="sub-title">Questions? Ask Max, Alina, or Allard.</p>
       </div>
       <nav class="nav">
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link" href="ai.html">AI Concepts</a>
-        <a class="nav-link" href="tips.html">Tips & Tricks</a>
+        <a class="nav-link" href="tips.html">Learn some tips and tricks now.</a>
       </nav>
     </header>
+
+    <section class="panel countdown-dock">
+      <div class="kicker">Countdown</div>
+      <div class="countdown">
+        <div class="count-box">
+          <div class="count-num" id="cd-days">00</div>
+          <div class="count-label">Days</div>
+        </div>
+        <div class="count-box">
+          <div class="count-num" id="cd-hours">00</div>
+          <div class="count-label">Hours</div>
+        </div>
+        <div class="count-box">
+          <div class="count-num" id="cd-mins">00</div>
+          <div class="count-label">Minutes</div>
+        </div>
+        <div class="count-box">
+          <div class="count-num" id="cd-secs">00</div>
+          <div class="count-label">Seconds</div>
+        </div>
+      </div>
+      <p id="countdownMessage" class="helper"></p>
+    </section>
 
     <div class="marquee" style="margin: 14px 0;">
       <span>Welcome to the neon zone • Hackathon on 24 Feb 2026 • 14:00 Intro • 17:00 Pizza + Demos • 90s vibes guaranteed</span>
@@ -49,37 +72,8 @@
             <li>17:00 Pizza + project presentations.</li>
             <li>Optional: continue hacking after work.</li>
           </ul>
-          <div class="hr"></div>
-          <div class="badge-row">
-            <div class="badge">No RSVP needed</div>
-            <div class="badge">No location listed</div>
-            <div class="badge">Public invite</div>
-          </div>
         </div>
       </div>
-    </section>
-
-    <section class="panel" style="margin-top: 14px;">
-      <div class="kicker">Countdown</div>
-      <div class="countdown">
-        <div class="count-box">
-          <div class="count-num" id="cd-days">00</div>
-          <div class="count-label">Days</div>
-        </div>
-        <div class="count-box">
-          <div class="count-num" id="cd-hours">00</div>
-          <div class="count-label">Hours</div>
-        </div>
-        <div class="count-box">
-          <div class="count-num" id="cd-mins">00</div>
-          <div class="count-label">Minutes</div>
-        </div>
-        <div class="count-box">
-          <div class="count-num" id="cd-secs">00</div>
-          <div class="count-label">Seconds</div>
-        </div>
-      </div>
-      <p id="countdownMessage" class="helper"></p>
     </section>
 
     <section class="panel" style="margin-top: 14px;">
@@ -97,15 +91,6 @@
       <div style="margin-top: 10px;">
         <button class="btn" id="ideaBtn">Generate a (cringy) 90s hack idea</button>
       </div>
-    </section>
-
-    <section class="panel" style="margin-top: 14px;">
-      <div class="kicker">AI at work vs private hacking (sensitive vs non-sensitive)</div>
-      <ul class="list">
-        <li>Sensitive info means internal code, customer data, or anything non-public.</li>
-        <li>Rule of thumb: use public tools only for non-sensitive work.</li>
-        <li>For sensitive work, use company-approved approaches (no details here).</li>
-      </ul>
     </section>
 
     <section class="panel" style="margin-top: 14px;">
