@@ -1,0 +1,145 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Hackathon; Tips and tricks for AI working</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="panel header">
+      <div>
+        <div class="kicker">Neon invite • Public info only</div>
+        <h1 class="site-title"><span class="rainbow">AI Hackathon; Tips and tricks for AI working</span></h1>
+        <p class="sub-title">Learn, build, and share how we use AI to code at work. All levels welcome.</p>
+        <p class="sub-title">Questions? Ask Max, Alina, or Allard.</p>
+      </div>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="ai.html">AI Concepts</a>
+        <a class="nav-link" href="tips.html">Tips & Tricks</a>
+      </nav>
+    </header>
+
+    <div class="marquee" style="margin: 14px 0;">
+      <span>Welcome to the neon zone • Hackathon on 24 Feb 2026 • 14:00 Intro • 17:00 Pizza + Demos • 90s vibes guaranteed</span>
+    </div>
+
+    <section class="panel">
+      <div class="grid-2">
+        <div>
+          <div class="kicker">Event snapshot</div>
+          <ul class="list">
+            <li>Purpose: experience coding with AI at work and share tips/tricks.</li>
+            <li>Audience: everyone from beginner to experienced coder.</li>
+            <li>Team size: 3–4 people.</li>
+            <li>Theme: examples are provided for inspiration, but anything goes if it teaches AI tooling usage.</li>
+            <li>Demo time limit: 3–4 minutes per team.</li>
+            <li>Judging tease: best demo, best use of AI, most useful, funniest, etc. + a mystery judge.</li>
+            <li>Prize: a trophy.</li>
+            <li>Dietary restrictions: Contact Allard.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="kicker">Schedule (Europe/Stockholm)</div>
+          <ul class="list">
+            <li>14:00 Intro starts (quick ~15 min).</li>
+            <li>Hack time.</li>
+            <li>17:00 Pizza + project presentations.</li>
+            <li>Optional: continue hacking after work.</li>
+          </ul>
+          <div class="hr"></div>
+          <div class="badge-row">
+            <div class="badge">No RSVP needed</div>
+            <div class="badge">No location listed</div>
+            <div class="badge">Public invite</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-top: 14px;">
+      <div class="kicker">Countdown</div>
+      <div class="countdown">
+        <div class="count-box">
+          <div class="count-num" id="cd-days">00</div>
+          <div class="count-label">Days</div>
+        </div>
+        <div class="count-box">
+          <div class="count-num" id="cd-hours">00</div>
+          <div class="count-label">Hours</div>
+        </div>
+        <div class="count-box">
+          <div class="count-num" id="cd-mins">00</div>
+          <div class="count-label">Minutes</div>
+        </div>
+        <div class="count-box">
+          <div class="count-num" id="cd-secs">00</div>
+          <div class="count-label">Seconds</div>
+        </div>
+      </div>
+      <p id="countdownMessage" class="helper"></p>
+    </section>
+
+    <section class="panel" style="margin-top: 14px;">
+      <div class="kicker">Calendar</div>
+      <div class="copy-row">
+        <a class="btn" id="googleCal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=AI%20Hackathon%3B%20Tips%20and%20tricks%20for%20AI%20working&dates=20260224T130000Z%2F20260224T170000Z&details=Join%20the%20AI%20Hackathon%20%E2%80%94%20learn%20and%20share%20AI%20coding%20tips.%20Pizza%20at%2017%3A00%20and%20optional%20hacking%20afterwards." target="_blank" rel="noreferrer">Add to Google Calendar</a>
+        <a class="btn secondary" id="icsBtn" href="#" download="ai-hackathon.ics">Download .ics</a>
+      </div>
+      <p class="helper">No location included in the calendar invite.</p>
+    </section>
+
+    <section class="panel" style="margin-top: 14px;">
+      <div class="kicker">90s Hack Idea Generator</div>
+      <div id="ideaBox" class="idea-box">Click the button to generate a (cringy) 90s hack idea.</div>
+      <div style="margin-top: 10px;">
+        <button class="btn" id="ideaBtn">Generate a (cringy) 90s hack idea</button>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-top: 14px;">
+      <div class="kicker">AI at work vs private hacking (sensitive vs non-sensitive)</div>
+      <ul class="list">
+        <li>Sensitive info means internal code, customer data, or anything non-public.</li>
+        <li>Rule of thumb: use public tools only for non-sensitive work.</li>
+        <li>For sensitive work, use company-approved approaches (no details here).</li>
+      </ul>
+    </section>
+
+    <section class="panel" style="margin-top: 14px;">
+      <div class="kicker">Guestbook / Notes</div>
+      <p class="helper">Public chat wall. Be nice. Newest-first.</p>
+      <form id="guestForm">
+        <div class="form-row">
+          <div>
+            <label for="guestName">Name</label>
+            <input id="guestName" name="name" class="input" maxlength="32" required />
+          </div>
+          <div>
+            <label for="guestMessage">Message</label>
+            <textarea id="guestMessage" name="message" maxlength="500" required></textarea>
+            <div class="helper" id="messageCount">0/500</div>
+          </div>
+        </div>
+        <div class="copy-row" style="margin-top: 10px;">
+          <button class="btn" id="guestPost" type="submit">Post</button>
+          <button class="btn secondary" id="guestRefresh" type="button">Refresh</button>
+          <span class="helper" id="guestStatus"></span>
+        </div>
+      </form>
+      <div id="guestLog" class="chat-log"></div>
+    </section>
+
+    <div class="hr"></div>
+
+    <footer class="footer">
+      <div>© <span data-year></span> Neon Hackathon Invite. All vibes, no secrets.</div>
+    </footer>
+  </div>
+
+  <script src="assets/site.js"></script>
+  <script src="assets/index.js"></script>
+</body>
+</html>

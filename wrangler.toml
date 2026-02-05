@@ -1,0 +1,15 @@
+﻿name = "ai-hackathon-invite"
+compatibility_date = "2026-02-05"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "GUESTBOOK_DB"
+database_name = "ai-hackathon-guestbook"
+database_id = "YOUR_DATABASE_ID"
+
+# Optional KV for simple rate limiting. If you skip KV, the function
+# falls back to best-effort in-memory limits.
+[[kv_namespaces]]
+binding = "GUESTBOOK_RL"
+id = "YOUR_KV_ID"
+preview_id = "YOUR_KV_PREVIEW_ID"

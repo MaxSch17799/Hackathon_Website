@@ -1,0 +1,119 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tips & Tricks • AI Hackathon</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="panel header">
+      <div>
+        <div class="kicker">Tips & Tricks</div>
+        <h1 class="site-title"><span class="rainbow">AI Hackathon Playbook</span></h1>
+        <p class="sub-title">Short, punchy, and actually usable. Keep it moving.</p>
+      </div>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="ai.html">AI Concepts</a>
+        <a class="nav-link" href="tips.html">Tips & Tricks</a>
+      </nav>
+    </header>
+
+    <section class="panel" style="margin-top: 14px;">
+      <div class="kicker">Tools allowed</div>
+      <p>All tools allowed.</p>
+      <ul class="list">
+        <li>Lovable</li>
+        <li>ChatGPT</li>
+        <li>VS Code + Codex/Co-pilot</li>
+        <li>Claude Code</li>
+        <li>Cursor</li>
+        <li>Gemini</li>
+        <li>Ollama (offline)</li>
+        <li>Sora (demo videos 😉)</li>
+        <li>Antigravity</li>
+      </ul>
+    </section>
+
+    <section class="panel" style="margin-top: 14px;">
+      <div class="kicker">Workflow (click to expand)</div>
+      <div class="accordion">
+        <div class="acc-item open">
+          <div class="acc-header">1) Ideation <span>▶</span></div>
+          <div class="acc-body">
+            Ask AI to challenge the idea and ask clarifying questions. Let it poke holes early.
+          </div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-header">2) Planning <span>▶</span></div>
+          <div class="acc-body">
+            Write a quick planning doc, have a second agent review it, then split into chunks for parallel agents.
+          </div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-header">3) Execution <span>▶</span></div>
+          <div class="acc-body">
+            Don’t hand-write everything. Run multiple agents, keep an agents.md/readme.md, ask for docs/comments, and use screenshots or PowerPoint mockups as inputs.
+          </div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-header">4) Review / Debug <span>▶</span></div>
+          <div class="acc-body">
+            Paste logs, switch agents when stuck, and add screenshots to help the AI see what’s wrong.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-top: 14px;">
+      <div class="kicker">Good phrases to use</div>
+      <div class="copy-row">
+        <button class="copy-btn" data-copy="Ask me questions to clarify.">Ask me questions to clarify.</button>
+        <button class="copy-btn" data-copy="Investigate XYZ behavior and report back with hypotheses and tests.">Investigate XYZ behavior and report back with hypotheses and tests.</button>
+        <button class="copy-btn" data-copy="Help me formulate a prompt for <goal> with constraints <…>.">Help me formulate a prompt for <goal> with constraints <…>.</button>
+        <button class="copy-btn" data-copy="Be specific; pay attention to the language you use.">Be specific; pay attention to the language you use.</button>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-top: 14px;">
+      <div class="kicker">Prompt builder</div>
+      <div class="prompt-builder">
+        <div class="form-row">
+          <div>
+            <label for="pb-goal">Goal</label>
+            <input id="pb-goal" class="input" placeholder="Build a neon invite landing page" />
+          </div>
+          <div>
+            <label for="pb-context">Context</label>
+            <input id="pb-context" class="input" placeholder="Static site, no backend, 3 pages" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="pb-constraints">Constraints</label>
+            <input id="pb-constraints" class="input" placeholder="No private info, 90s style, mobile-friendly" />
+          </div>
+          <div>
+            <label for="pb-output">Output format</label>
+            <input id="pb-output" class="input" placeholder="HTML/CSS/JS with file list" />
+          </div>
+        </div>
+        <div class="output-box" id="pb-result"></div>
+        <div class="copy-row">
+          <button class="btn secondary" id="pb-copy">Copy prompt</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="hr"></div>
+    <footer class="footer">
+      <div>Use the tips, win the trophy, stay neon.</div>
+    </footer>
+  </div>
+
+  <script src="assets/site.js"></script>
+  <script src="assets/tips.js"></script>
+</body>
+</html>
