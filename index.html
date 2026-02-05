@@ -4,10 +4,38 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AI Hackathon; Tips and tricks for AI working</title>
+  <script>
+    if (sessionStorage.getItem("introSeen_v1")) {
+      document.documentElement.classList.add("intro-skip");
+    }
+  </script>
   <link rel="stylesheet" href="assets/style.css" />
-  <link rel="icon" type="image/jpeg" href="33702949116bc77168dd93bdecc9f955.jpg" />
+  <link rel="icon" type="image/jpeg" href="Media/33702949116bc77168dd93bdecc9f955.jpg" />
 </head>
-<body>
+<body data-music="on">
+  <audio id="bgMusic" src="Media/Nyan%20Cat%20%5Boriginal%5D.mp3" loop preload="auto"></audio>
+  <!-- Intro overlay: remove this block to disable the 90s mail animation -->
+  <div class="intro-overlay" id="introOverlay" aria-hidden="true">
+    <div class="intro-card intro-window">
+      <div class="intro-titlebar">
+        <span class="intro-titlebar-text">Inbox.exe</span>
+        <span class="intro-titlebar-buttons" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+      </div>
+      <div class="intro-content">
+        <div class="intro-scene">
+        <div class="intro-envelope"></div>
+        <div class="intro-mailbox">
+          <div class="intro-mailbox-label">INBOX</div>
+        </div>
+        </div>
+        <div class="intro-title">You've got mail!</div>
+        <div class="intro-sub">A fresh invite just arrived in your inbox.</div>
+        <button class="btn intro-btn" id="introEnter" type="button">Click here to see your invitation</button>
+      </div>
+    </div>
+  </div>
   <div class="page">
     <header class="panel header">
       <div>
@@ -48,7 +76,7 @@
     </section>
 
     <div class="marquee" style="margin: 14px 0;">
-      <span>Welcome to the neon zone • Hackathon on 24 Feb 2026 • 14:00 Intro • 17:00 Pizza + Demos • 90s vibes guaranteed</span>
+      <span>Welcome to the neon zone • Tubular, radical, and totally gnarly • Hackathon on 24 Feb 2026 • 14:00 Intro • 17:00 Pizza + Demos • 90s vibes guaranteed • Hack the day, shred the night • So retro it hurts</span>
     </div>
 
     <section class="panel">
@@ -60,27 +88,11 @@
             <li>Audience: everyone from beginner to experienced coder.</li>
             <li>Team size: 3–4 people.</li>
             <li>Theme: examples are provided for inspiration, but anything goes if it teaches AI tooling usage.</li>
-            <li>Kiosk digital implementation; make it easier to keep track of kiosk sales and automate the invoicing.</li>
-            <li>Warehouse QR; create a system that allows for easier real life tracking of where components are.</li>
-            <li>Website Rainforest; modernize and update the public website.</li>
-            <li>Dashboard, but great; improve the dashboard.</li>
-            <li>Dishwasher state machine; Digitalize the dishwasher schedule and make the state machine digital.</li>
-            <li>Create VS code extension for...</li>
-            <li>Demo time limit: 3–4 minutes per team.</li>
+            <li>Demo time limit: 5 minutes per team.</li>
             <li>Judging tease: best demo, best use of AI, most useful, funniest, etc. + a mystery judge.</li>
             <li>Prize: a trophy.</li>
             <li>Dietary restrictions: Contact Allard.</li>
           </ul>
-        </div>
-        <div>
-          <div class="kicker">Schedule (Europe/Stockholm)</div>
-          <ul class="list">
-            <li>14:00 Intro starts (quick ~15 min).</li>
-            <li>Hack time.</li>
-            <li>17:00 Pizza + project presentations.</li>
-            <li>Optional: continue hacking after work.</li>
-          </ul>
-          <div class="hr"></div>
           <div class="kicker">Example ideas</div>
           <ul class="list">
             <li>Kiosk digital implementation; make it easier to keep track of kiosk sales and automate the invoicing.</li>
@@ -91,6 +103,15 @@
             <li>Create VS code extension for...</li>
           </ul>
           <p class="idea-callout">Think of more ideas in this format and post them in the guestbook.</p>
+        </div>
+        <div>
+          <div class="kicker">Schedule (Europe/Stockholm)</div>
+          <ul class="list">
+            <li>14:00 Intro starts (quick ~15 min).</li>
+            <li>Hack time.</li>
+            <li>17:00 Pizza + project presentations.</li>
+            <li>Optional: continue hacking after work.</li>
+          </ul>
         </div>
       </div>
     </section>

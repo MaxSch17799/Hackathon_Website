@@ -39,6 +39,7 @@ a:hover {
   flex-direction: column;
   gap: 16px;
   margin-bottom: 24px;
+  align-items: center;
 }
 
 .s-eyebrow {
@@ -63,6 +64,8 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
+  width: 100%;
 }
 
 .nav-link {
@@ -283,9 +286,9 @@ textarea {
 
 @media (min-width: 900px) {
   .s-header {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 

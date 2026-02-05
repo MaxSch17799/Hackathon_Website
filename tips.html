@@ -4,10 +4,38 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tips & Tricks • AI Hackathon</title>
+  <script>
+    if (sessionStorage.getItem("introSeen_v1")) {
+      document.documentElement.classList.add("intro-skip");
+    }
+  </script>
   <link rel="stylesheet" href="assets/style.css" />
-  <link rel="icon" type="image/jpeg" href="33702949116bc77168dd93bdecc9f955.jpg" />
+  <link rel="icon" type="image/jpeg" href="Media/33702949116bc77168dd93bdecc9f955.jpg" />
 </head>
-<body>
+<body data-music="on">
+  <audio id="bgMusic" src="Media/Nyan%20Cat%20%5Boriginal%5D.mp3" loop preload="auto"></audio>
+  <!-- Intro overlay: remove this block to disable the 90s mail animation -->
+  <div class="intro-overlay" id="introOverlay" aria-hidden="true">
+    <div class="intro-card intro-window">
+      <div class="intro-titlebar">
+        <span class="intro-titlebar-text">Inbox.exe</span>
+        <span class="intro-titlebar-buttons" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+      </div>
+      <div class="intro-content">
+        <div class="intro-scene">
+        <div class="intro-envelope"></div>
+        <div class="intro-mailbox">
+          <div class="intro-mailbox-label">INBOX</div>
+        </div>
+        </div>
+        <div class="intro-title">You've got mail!</div>
+        <div class="intro-sub">A fresh invite just arrived in your inbox.</div>
+        <button class="btn intro-btn" id="introEnter" type="button">Click here to see your invitation</button>
+      </div>
+    </div>
+  </div>
   <div class="page">
     <header class="panel header">
       <div>

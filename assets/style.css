@@ -159,7 +159,7 @@ a {
 
 .marquee span {
   display: inline-block;
-  padding-left: 100%;
+  padding-left: 30%;
   animation: marquee 18s linear infinite;
 }
 
@@ -491,6 +491,175 @@ textarea {
   object-fit: contain;
   border: 4px groove var(--pink);
   background: rgba(0, 0, 0, 0.6);
+}
+
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #008080;
+  z-index: 9999;
+  transition: opacity 0.4s ease;
+}
+
+.intro-skip .intro-overlay {
+  display: none;
+}
+
+.intro-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.intro-active {
+  overflow: hidden;
+}
+
+.intro-card {
+  max-width: 520px;
+  width: min(92vw, 520px);
+  text-align: center;
+  padding: 0;
+  border: 2px solid #ffffff;
+  border-right-color: #000000;
+  border-bottom-color: #000000;
+  background: #c0c0c0;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.7);
+  font-family: "MS Sans Serif", "Tahoma", sans-serif;
+}
+
+.intro-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px;
+  background: linear-gradient(90deg, #000080, #0a5aa7);
+  color: #ffffff;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+
+.intro-titlebar-buttons {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.intro-titlebar-buttons span {
+  width: 12px;
+  height: 12px;
+  background: #c0c0c0;
+  border: 1px solid #000;
+  box-shadow: inset 1px 1px 0 #ffffff;
+}
+
+.intro-content {
+  padding: 18px 18px 22px;
+  background: #dcdcdc;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+.intro-scene {
+  position: relative;
+  width: min(100%, 360px);
+  height: 170px;
+  margin: 0 auto 12px;
+  overflow: hidden;
+  background: #efefef;
+  border: 2px inset #ffffff;
+}
+
+.intro-envelope {
+  position: absolute;
+  width: 46px;
+  height: 30px;
+  left: 0;
+  top: 0;
+  background: #f7f7f7;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #808080;
+  image-rendering: pixelated;
+  offset-path: path("M -30 120 C 40 120, 80 120, 110 110 C 150 95, 150 40, 95 30 C 40 20, 30 90, 80 120 C 120 145, 210 145, 270 120 C 310 108, 330 96, 338 90");
+  offset-rotate: auto;
+  offset-distance: 0%;
+  opacity: 0;
+}
+
+.intro-envelope::after {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 10px;
+  width: 10px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+  box-shadow: -5px -5px 0 rgba(0, 0, 0, 0.35), -3px 5px 0 rgba(0, 0, 0, 0.35);
+}
+
+.intro-envelope::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-left: 23px solid transparent;
+  border-right: 23px solid transparent;
+  border-top: 12px solid #e5e5e5;
+}
+
+.intro-mailbox {
+  position: absolute;
+  right: 8px;
+  bottom: 14px;
+  width: 140px;
+  height: 80px;
+  background: linear-gradient(180deg, #f8f8f8, #bfbfbf);
+  border: 2px solid #000;
+  box-shadow: inset 2px 2px 0 #ffffff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+  animation: mailbox-bounce 2.4s ease-in-out infinite;
+}
+
+.intro-mailbox-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000080;
+  background: #ffffff;
+  padding: 2px 8px;
+  border: 1px solid #000;
+}
+
+.intro-title {
+  font-size: 26px;
+  margin-bottom: 6px;
+  color: #000080;
+}
+
+.intro-sub {
+  color: #111111;
+  margin-bottom: 16px;
+}
+
+.intro-btn {
+  font-size: 16px;
+}
+
+
+@keyframes mailbox-bounce {
+  0%, 55% { transform: translateY(0); }
+  70% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
 }
 
 @media (max-width: 760px) {
