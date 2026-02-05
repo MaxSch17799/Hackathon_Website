@@ -1,4 +1,4 @@
-﻿(() => {
+(() => {
   const trailSymbols = ["*", "+", "o", "x", "#", "@"]; 
   document.addEventListener("mousemove", (e) => {
     if (Math.random() < 0.4) return;
@@ -15,10 +15,10 @@
   });
 
   const navLinks = document.querySelectorAll(".nav-link");
-  const path = location.pathname.split("/").pop() || "index.html";
+  const currentPath = location.pathname.replace(/\/+$/, "");
   navLinks.forEach((link) => {
-    const href = link.getAttribute("href");
-    if (href && href.endsWith(path)) {
+    const linkPath = new URL(link.href).pathname.replace(/\/+$/, "");
+    if (linkPath === currentPath) {
       link.classList.add("active");
     }
   });

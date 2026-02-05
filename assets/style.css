@@ -66,6 +66,7 @@ a {
   gap: 12px;
   text-align: center;
   justify-items: center;
+  position: relative;
 }
 
 .site-title {
@@ -205,6 +206,7 @@ a {
   gap: 8px;
 }
 
+
 .btn.secondary {
   background: #00f;
   border-color: var(--yellow);
@@ -331,6 +333,14 @@ textarea {
 .helper {
   font-size: 12px;
   color: #ffb3ff;
+}
+
+.idea-callout {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--yellow);
+  text-shadow: 2px 2px 0 #000;
+  margin-top: 10px;
 }
 
 .chat-log {
@@ -503,5 +513,9 @@ textarea {
   }
   .count-label {
     font-size: 10px;
+  }
+  .idea-callout {
+    font-size: 16px;
+    text-align: center;
   }
 }
