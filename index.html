@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AI Hackathon; Tips and tricks for AI working</title>
   <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" type="image/jpeg" href="33702949116bc77168dd93bdecc9f955.jpg" />
 </head>
 <body>
   <div class="page">
@@ -22,7 +23,7 @@
       </nav>
     </header>
 
-    <section class="panel countdown-dock">
+    <section class="panel countdown-sticky">
       <div class="kicker">Countdown</div>
       <div class="countdown">
         <div class="count-box">
@@ -77,20 +78,21 @@
     </section>
 
     <section class="panel" style="margin-top: 14px;">
-      <div class="kicker">Calendar</div>
-      <div class="copy-row">
-        <a class="btn" id="googleCal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=AI%20Hackathon%3B%20Tips%20and%20tricks%20for%20AI%20working&dates=20260224T130000Z%2F20260224T170000Z&details=Join%20the%20AI%20Hackathon%20%E2%80%94%20learn%20and%20share%20AI%20coding%20tips.%20Pizza%20at%2017%3A00%20and%20optional%20hacking%20afterwards." target="_blank" rel="noreferrer">Add to Google Calendar</a>
-        <a class="btn secondary" id="icsBtn" href="#" download="ai-hackathon.ics">Download .ics</a>
-      </div>
-      <p class="helper">No location included in the calendar invite.</p>
-    </section>
-
-    <section class="panel" style="margin-top: 14px;">
       <div class="kicker">90s Hack Idea Generator</div>
       <div id="ideaBox" class="idea-box">Click the button to generate a (cringy) 90s hack idea.</div>
       <div style="margin-top: 10px;">
         <button class="btn" id="ideaBtn">Generate a (cringy) 90s hack idea</button>
       </div>
+    </section>
+
+    <section class="panel" style="margin-top: 14px;">
+      <div class="kicker">Joke prep checklist</div>
+      <p>Be sure to download more RAM before the event.</p>
+      <ul class="list">
+        <li><a href="#" onclick="funnyAlert('Please visit the IT department for a re-education. You did not pass the phishing test.'); return false;">Download more RAM</a></li>
+        <li><a href="#" onclick="funnyAlert('Optimization complete. Your chair is now 12% faster.'); return false;">Install a performance chair driver</a></li>
+        <li><a href="#" onclick="funnyAlert('Your dial-up modem is now vaporwave enabled. Please wait 3–5 business songs.'); return false;">Upgrade to Turbo Dial-Up</a></li>
+      </ul>
     </section>
 
     <section class="panel" style="margin-top: 14px;">
@@ -115,6 +117,15 @@
         </div>
       </form>
       <div id="guestLog" class="chat-log"></div>
+    </section>
+
+    <section class="panel" style="margin-top: 14px;">
+      <div class="kicker">Calendar</div>
+      <div class="copy-row">
+        <a class="btn" id="googleCal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=AI%20Hackathon%3B%20Tips%20and%20tricks%20for%20AI%20working&dates=20260224T130000Z%2F20260224T170000Z&details=Join%20the%20AI%20Hackathon%20%E2%80%94%20learn%20and%20share%20AI%20coding%20tips.%20Pizza%20at%2017%3A00%20and%20optional%20hacking%20afterwards." target="_blank" rel="noreferrer">Add to Google Calendar</a>
+        <a class="btn secondary" id="icsBtn" href="#" download="ai-hackathon.ics">Download .ics</a>
+      </div>
+      <p class="helper">No location included in the calendar invite.</p>
     </section>
 
     <div class="hr"></div>

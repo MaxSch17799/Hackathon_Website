@@ -8,7 +8,31 @@
     });
   });
 
-  document.querySelectorAll(".copy-btn").forEach((btn) => {
+  const workflowToggle = document.getElementById("workflowToggle");
+  if (workflowToggle) {
+    const items = Array.from(document.querySelectorAll(".acc-item"));
+    const updateLabel = (allOpen) => {
+      workflowToggle.textContent = allOpen
+        ? "Workflow (click to collapse)"
+        : "Workflow (click to expand)";
+    };
+    const toggleAll = () => {
+      const allOpen = items.every((item) => item.classList.contains("open"));
+      items.forEach((item) => item.classList.toggle("open", !allOpen));
+      updateLabel(!allOpen);
+    };
+
+    updateLabel(items.every((item) => item.classList.contains("open")));
+    workflowToggle.addEventListener("click", toggleAll);
+    workflowToggle.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        toggleAll();
+      }
+    });
+  }
+
+  document.querySelectorAll("[data-copy]").forEach((btn) => {
     btn.addEventListener("click", async () => {
       const text = btn.getAttribute("data-copy") || "";
       try {

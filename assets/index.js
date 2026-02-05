@@ -59,38 +59,40 @@
   }
 
   const ideaList = [
-    "Clippy Psychic Hotline: AI that reads your TODOs and pretends it's destiny",
-    "Dial-Up Dreamweaver: an agent that only answers after a 56k modem scream",
-    "Win95 Wizard of Logs: turns stack traces into choose-your-own-adventures",
-    "Floppy Disk Time Machine: rollback bot that insists you label your disks",
-    "GeoCities KPI Shrine: neon dashboard that demands a sacrifice (a CSV)",
-    "Tamagotchi Deploy Pet: feed it passing tests or it runs away",
-    "AOL Build Buddy: 'You've got mail' every time CI blinks",
-    "Netscape Navigator for APIs: RAG over Swagger with a spinning logo",
-    "MS Paint UI Prophet: doodle buttons and it spawns React",
-    "Y2K Stress Tester: agent swarm that thinks every date is 1999",
-    "ICQ Incident Pager: sends 'uh oh!' pings until you fix the bug",
-    "Winamp Workflow DJ: shuffles backlog into playlists",
-    "Encarta Fact Fairy: pops trivia bubbles while you read docs",
-    "CD-ROM Knowledge Vault: search with dramatic spin-up sounds",
-    "Pixelated PM: turns requirements into 8-bit quests",
-    "Laser Printer Linter: formats code so it looks good on paper",
-    "Alt-Tab Oracle: predicts the next window you should open",
-    "BBS Bug Bounty: nightly forum posts ranking today's weirdest bugs",
-    "Receipt Printer Roadmap: tasks printed on infinite virtual paper",
-    "Screensaver Standup: project status floats around the screen",
-    "AskJeeves Jira: questions your tickets with passive-aggressive politeness",
-    "Beige Box Bootcamp: setup assistant that only speaks in BIOS beeps",
-    "Shareware Scope Police: disables features after 30 minutes unless you promise focus",
-    "VRML Roadmap Rollercoaster: 3D backlog ride with AI narration",
-    "Napster Knowledge Sync: peer-to-peer FAQ swapping with random emojis",
-    "PalmPilot Pair Programmer: 160-char commit messages only",
-    "Blockbuster Bug Rewind: AI that rewinds commits until the plot makes sense",
-    "Hyperlink Hamster: runs in a wheel to power your build pipeline",
-    "Y2K Risk Radar: beeps whenever someone writes a date",
-    "MIDI Milestone Tracker: converts OKRs into tiny synth riffs",
-    "Robo-Clip Art Generator: turns error logs into motivational posters",
-    "GeoCities Guestbook QA: sorts feedback into neon priority lanes"
+    "Clippy Psychic Hotline: AI that reads your calendar and predicts your lunch",
+    "Dial-Up Dreamweaver: answers only after a 56k modem scream",
+    "Y2K Mood Ring: changes color based on your stress level",
+    "Tamagotchi To‑Do: feed it tasks or it runs away",
+    "GeoCities Shrine Builder: auto‑decorates goals with glitter GIFs",
+    "CD‑ROM Confidence Coach: pep talks with dramatic spin‑up sounds",
+    "Winamp Workout DJ: remixes your playlist based on steps",
+    "Encarta Trivia Fairy: pops random fun facts during meetings",
+    "PalmPilot Tiny Chef: 160‑character recipes for chaotic kitchens",
+    "AskJeeves Life Coach: answers everything with a polite question",
+    "Blockbuster Rewind Club: weekly recap of what you forgot to finish",
+    "Netscape Navigator for Snacks: RAG over the fridge inventory",
+    "MS Paint Posterizer: doodle a flyer, get a neon poster",
+    "ICQ Compliment Pager: sends 'uh oh!' but it's a compliment",
+    "AOL Alarm Clock: 'You've got sleep' every morning",
+    "Floppy Disk Time Machine: schedules naps and labels them",
+    "BBS Party Planner: auto‑assigns snacks and theme colors",
+    "Laser Printer Lullaby: prints bedtime stories one page at a time",
+    "VRML Living Room Tour: 3D tour of your plants (with lore)",
+    "Shareware Budget Buddy: unlocks more savings after 30 minutes",
+    "Receipt Printer Roadmap: turns goals into tiny paper tickets",
+    "Screensaver Standup: floating reminders that never judge you",
+    "Alt‑Tab Oracle: predicts which app you’ll open next",
+    "Pixelated Pet Planner: schedules walks with 8‑bit chimes",
+    "Napster Playlist Swap: trades playlists with mystery emojis",
+    "GeoCities Guestbook of Ideas: collects weird thoughts in neon",
+    "Turbo Dial‑Up Weather: takes 30 seconds to reveal the forecast",
+    "Robo‑Clip Art Generator: makes motivational posters from anything",
+    "MIDI Milestone Tracker: progress updates as tiny synth riffs",
+    "Beige Box Bootcamp: gentle reminders to stretch your wrists",
+    "Y2K Stress Tester: checks if your houseplants are bug‑ready",
+    "Hyperlink Hamster: runs in a wheel to power your day",
+    "Win95 Wizard of Snacks: suggests weird but tasty combos",
+    "Pixel Art Vacation Planner: turns trips into 8‑bit quests"
   ];
 
   const ideaBtn = document.getElementById("ideaBtn");
@@ -261,4 +263,8 @@
 
   fetchPosts();
   setInterval(fetchPosts, 15000);
+
+  window.funnyAlert = (message) => {
+    alert(message);
+  };
 })();
