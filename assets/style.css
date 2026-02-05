@@ -491,4 +491,17 @@ textarea {
     position: static;
     margin-top: 12px;
   }
+  .countdown {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .count-box {
+    padding: 8px 6px;
+  }
+  .count-num {
+    font-size: 18px;
+  }
+  .count-label {
+    font-size: 10px;
+  }
 }
