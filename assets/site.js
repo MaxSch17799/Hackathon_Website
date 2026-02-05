@@ -155,4 +155,12 @@
   document.querySelectorAll("[data-year]").forEach((el) => {
     el.textContent = String(new Date().getFullYear());
   });
+
+  const setCursor = (value) => {
+    document.body.style.cursor = value;
+  };
+  document.addEventListener("pointerdown", () => setCursor("wait"));
+  document.addEventListener("pointerup", () => setCursor("help"));
+  document.addEventListener("pointercancel", () => setCursor("help"));
+  window.addEventListener("blur", () => setCursor("help"));
 })();
